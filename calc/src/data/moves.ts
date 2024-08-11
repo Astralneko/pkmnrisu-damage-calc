@@ -4917,7 +4917,22 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);
 
-export const MOVES = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+const ARS_PATCH: {[name: string]: DeepPartial<MoveData>} = {
+  'Star Mash': {
+    bp: 60,
+    type: 'Celestial',
+    category: 'Physical',
+    zp: 120,
+    maxPower: 110,
+    makesContact: true,
+	isPunch: true,
+    overrideDefensiveStat: 'spd',
+  },
+};
+
+const ARS: {[name: string]: MoveData} = extend(true, {}, SV, ARS_PATCH);
+
+export const MOVES = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV, ARS];
 
 export class Moves implements I.Moves {
   private readonly gen: I.GenerationNum;

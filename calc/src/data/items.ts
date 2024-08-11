@@ -572,9 +572,48 @@ const BERRIES: {[berry: string]: {t: I.TypeName; p: number}} = {
   'Wepear Berry': {t: 'Electric', p: 90},
   'Wiki Berry': {t: 'Rock', p: 80},
   'Yache Berry': {t: 'Ice', p: 80},
+  'Nachna Berry': {t: 'Celestial', p: 80},
+  'Granatch Berry': {t: 'Glitch', p: 80},
+  'Furani Berry': {t: 'Fire', p: 100},
+  'Nedavi Berry': {t: 'Ice', p: 100},
+  'Rayoni Berry': {t: 'Electric', p: 100},
+  'Asirri Berry': {t: 'Poison', p: 100},
+  'Suenni Berry': {t: 'Psychic', p: 100},
 };
 
-export const ITEMS = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+const ARS = SV.concat([
+	'Celestium Z',
+	'Birdium Z',
+	'Felacium Z',
+	'Spikatium Z',
+	'Glimmorium Z',
+	'Tinkatium Z',
+	'Togekium Z',
+	'Miniorium Z',
+	'Volcaronium Z',
+	'Quritakium Z',
+	'Nachna Berry',
+	'Granatch Berry',
+	'Furani Berry',
+	'Nedavi Berry',
+	'Rayoni Berry',
+	'Asirri Berry',
+	'Suenni Berry',
+	'Nebula Fragment',
+	'Starry Plate',
+	'Celestial Gem',
+	'Celestial Memory',
+	'Corrupted Drive',
+	'Null Plate',
+	'Glitch Gem',
+	'Glitch Memory',
+	'Knowledge Rune',
+	'Jet Ball',
+	'Steam Ball'
+]);
+
+
+export const ITEMS = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV, ARS];
 
 export class Items implements I.Items {
   private readonly gen: I.GenerationNum;

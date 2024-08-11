@@ -339,7 +339,41 @@ const SV = SS.concat([
   'Zero to Hero',
 ]);
 
-export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+const ARS = SV.concat([
+	'Pack Mentality',
+	'Frostbitten',
+	'Shadow Cloak',
+	'Resilience',
+	'Life Drain',
+	'Seismic Waves',
+	'Updraft',
+	'Hatesucker',
+	'Antibody',
+	'Postmortal',
+	'Outsmart',
+	'Flame Absorb',
+	'Astralize',
+	'Incendiate',
+	'Aquilate',
+	'Verdarize',
+	'Villainize',
+	'Arcanize',
+	'Spectralize',
+	'Quickplay',
+	'Wild Card',
+	'Spectral Copy',
+	'Grassy Boost',
+	'Artist\'s Block',
+	'Starry Surge',
+	'Hero\'s Journey',
+	'Herald of Spring',
+	'Herald of Summer',
+	'Herald of Autumn',
+	'Herald of Winter',
+	'Permafrost',
+]);
+
+export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV, ARS];
 
 export class Abilities implements I.Abilities {
   private readonly gen: I.GenerationNum;

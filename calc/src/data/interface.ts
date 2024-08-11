@@ -1,6 +1,6 @@
 export interface As<T> {__brand: T}
 export type ID = (string & As<'ID'>) | (string & { __isID: true }) | '';
-export type GenerationNum = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+export type GenerationNum = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 export type GenderName = 'M' | 'F' | 'N';
 export type StatID = 'hp' | StatIDExceptHP;
 export type StatIDExceptHP = 'atk' | 'def' | 'spa' | 'spd' | 'spe';
@@ -11,10 +11,10 @@ export type ItemName = string & As<'ItemName'>;
 export type MoveName = string & As<'MoveName'>;
 export type SpeciesName = string & As<'SpeciesName'>;
 
-export type StatusName = 'slp' | 'psn' | 'brn' | 'frz' | 'par' | 'tox';
+export type StatusName = 'slp' | 'psn' | 'brn' | 'frz' | 'par' | 'tox' | 'fsb';
 
 export type GameType = 'Singles' | 'Doubles';
-export type Terrain = 'Electric' | 'Grassy' | 'Psychic' | 'Misty';
+export type Terrain = 'Electric' | 'Grassy' | 'Psychic' | 'Misty' | 'Irradiated' | 'Spirit' | 'Corrupted';
 export type Weather =
   | 'Sand' | 'Sun' | 'Rain' | 'Hail' | 'Snow' | 'Harsh Sunshine' | 'Heavy Rain' | 'Strong Winds';
 
@@ -28,7 +28,7 @@ export type NatureName =
 export type TypeName =
   'Normal' | 'Fighting' | 'Flying' | 'Poison' | 'Ground' | 'Rock' | 'Bug' | 'Ghost' | 'Steel' |
   'Fire' | 'Water' | 'Grass' | 'Electric' | 'Psychic' | 'Ice' | 'Dragon' | 'Dark' | 'Fairy' |
-  'Stellar' | '???';
+  'Stellar' | '???' | 'Celestial' | 'Glitch';
 
 export type MoveCategory = 'Physical' | 'Special' | 'Status';
 

@@ -10021,7 +10021,44 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
 
-export const SPECIES = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+const ARS_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
+	Clefairy: {types:['Celestial','Fairy']},
+	Clefable: {types:['Celestial','Fairy']},
+	Cleffa: {types:['Celestial','Fairy']},
+	Porygon: {types:['Normal','Glitch']},
+	Porygon2: {types:['Normal','Glitch']},
+	'Porygon-Z': {types:['Normal','Glitch']},
+	Ninetales: {types:['Fire','Ghost']},
+	Sceptile: {types:['Grass','Dragon']},
+	Lunatone: {types:['Rock','Celestial']},
+	Solrock: {types:['Rock','Celestial']},
+	Staraptor: {types:['Fighting','Flying']},
+	Elgyem: {types:['Psychic','Celestial']},
+	Beheeyem: {types:['Psychic','Celestial']},
+	Sliggoo: {types:['Dragon','Water']},
+	Goodra: {types:['Dragon','Water']},
+	Cosmog: {types:['Celestial']},
+	Cosmoem: {types:['Celestial']},
+	Solgaleo: {types:['Celestial','Steel']},
+	Lunala: {types:['Celestial','Ghost']},
+	Necrozma: {types:['Celestial']},
+	'Necrozma-Dawn-Wings': {types:['Celestial','Steel']},
+	'Necrozma-Dusk-Mane': {types:['Celestial','Ghost']},
+	'Necrozma-Ultra': {types:['Celestial','Dragon']},
+	Zamazenta: {types:['Fairy']},
+	'Zamazenta-Crowned': {types:['Fairy','Fighting']},
+	Angeal: {
+		types: ['Grass', 'Psychic'],
+		bs: {hp: 48, at: 31, df: 49, sa: 56, sd: 67, sp: 44},
+		weightkg: 0.4,
+		abilities: {0: 'Overgrow'},
+		nfe: true,
+	},
+};
+
+const ARS: {[name: string]: SpeciesData} = extend(true, {}, SV, ARS_PATCH);
+
+export const SPECIES = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV, ARS];
 
 export class Species implements I.Species {
   private readonly gen: I.GenerationNum;

@@ -431,7 +431,32 @@ const SV: TypeChart = extend(true, {}, SS, {
   },
 });
 
-export const TYPE_CHART = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+const ARS: TypeChart = extend(true, {}, SV, {
+	'???': {Celestial: 1, Glitch: 1},
+	Normal: {Celestial: 0.5, Glitch: 1},
+	Fire: {Celestial: 1, Glitch: 1},
+	Water: {Celestial: 0.5, Glitch: 2},
+	Electric: {Celestial: 2, Glitch: 0.5},
+	Grass: {Celestial: 1, Glitch: 1},
+	Ice: {Celestial: 1, Glitch: 1},
+	Fighting: {Celestial: 0.5, Glitch: 0.5},
+	Poison: {Celestial: 1, Glitch: 0.5},
+	Ground: {Celestial: 0.5, Glitch: 1},
+	Flying: {Celestial: 1, Glitch: 0.5},
+	Psychic: {Celestial: 0.5, Glitch: 2},
+	Bug: {Fairy: 2, Celestial: 1, Glitch: 1},
+	Rock: {Celestial: 0.5, Glitch: 1},
+	Ghost: {Celestial: 2, Glitch: 1},
+	Dragon: {Celestial: 1, Glitch: 1},
+	Dark: {Celestial: 2, Glitch: 1},
+	Steel: {Celestial: 0.5, Glitch: 1},
+	Fairy: {Celestial: 1, Glitch: 2},
+	Stellar: {Celestial: 1, Glitch: 1},
+	Celestial: {Normal: 1, Fire: 1, Water: 2, Electric: 1, Grass: 1, Ice: 0.5, Fighting: 1, Poison: 1, Ground: 2, Flying: 1, Psychic: 0.5, Bug: 1, Rock: 1, Ghost: 1, Dragon: 0.5, Dark: 1, Steel: 1, Fairy: 0.5, Stellar: 1, Celestial: 0.5, Glitch: 2},
+	Glitch: {Normal: 1, Fire: 1, Water: 0.5, Electric: 0.5, Grass, 1, Ice: 1, Fighting: 1, Poison: 1, Ground: 1, Flying: 1, Psychic: 2, Bug: 1, Rock: 0.5, Ghost: 1, Dragon: 2, Dark: 1, Steel: 2, Fairy: 1, Stellar: 1, Celestial: 0.5, Glitch: 2}
+});
+
+export const TYPE_CHART = [{}, RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV, ARS];
 
 export class Types implements I.Types {
   private readonly gen: I.GenerationNum;
